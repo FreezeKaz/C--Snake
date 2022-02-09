@@ -1,8 +1,7 @@
 #include "fruit.hpp"
 #include "snake.hpp"
 #include "segment.hpp"
-	
-#include <SDL2/SDL_ttf.h>
+
 
 Fruit::Fruit(int fruitX,int fruitY,int formNb, Snake* snake)
 {
