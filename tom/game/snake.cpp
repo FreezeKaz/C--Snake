@@ -4,12 +4,10 @@
 
 Snake::Snake(int length, int startDirection)
 {   
-    std::cout << "construction" << std::endl;
     int x = SIZE/2;
     int y = SIZE/2;
     for(int i=0; i < length; i++)
     {
-        std::cout << "aller" << std::endl;
         switch (startDirection)
         {
         case 0:
@@ -25,10 +23,8 @@ Snake::Snake(int length, int startDirection)
         }
         grow(x,y,startDirection);
     }
-
-    std::cout << "mon snake est créé" << std::endl;
     this->dir = startDirection;
-    std::cout << startDirection << std::endl;
+    
 }
 
 Segment Snake::getHead()
@@ -42,23 +38,17 @@ void Snake::move()
 
 void Snake::turnSnake(int dir)
 {
-
     head->setDir(dir);
 }
 void Snake::grow(int x, int y, int dir)
 {
-
-    std::cout << "Initialisation de mon snake" << std::endl;
     Segment *newSegment = new Segment(x, y, 2);
     int xPos = x;
-    std::cout << xPos<< std::endl;
     int yPos = y;
 
     if (head == NULL)
     {
-        std::cout << "voici ma tête" << std::endl;
         head = newSegment;
-        
         return;
     }
  
@@ -171,12 +161,9 @@ int B = 0;
 void Snake::print(SDL_Renderer* renderer,bool rgb)
 {
     Segment *loop = head;
+
     if (head == NULL)
     return;
-
-    /*std::cout << head->getDir() << std::endl;
-    std::cout << head->getX() << std::endl;
-    std::cout << head->getY() << std::endl;*/
 
     while (loop != NULL)
     {   

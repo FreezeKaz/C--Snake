@@ -112,7 +112,7 @@ int main(){
         if (snake->getGamemode() == true && timer == 0)
         {
             timer = 90; 
-            std::cout<<  "activated" <<std::endl;
+
         }
         if( timer > 1)
         {   
@@ -120,7 +120,6 @@ int main(){
         }
         else if (timer == 1)
         {
-            std::cout<<  "deactivated" <<std::endl;
             snake->setGamemode(false);
             timer = 0;
         }
@@ -160,6 +159,7 @@ int main(){
         {
             gameEnd = snake->collisionSnake();
             frame_rate_ms = 90;
+            
         }
         else
         {
