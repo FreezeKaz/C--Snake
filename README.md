@@ -1,3 +1,2 @@
-# snake
-snake game project 7
- test
+# Snake
+C++ introduction, Snake game proejct...
